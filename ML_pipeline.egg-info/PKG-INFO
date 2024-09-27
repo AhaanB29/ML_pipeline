@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ML-pipeline
+Version: 0.0.1
+Author: Ahaan Banerjee
+Author-email: ahaanbanerjee11@gmail.com
+Requires: numpy
+Requires: pandas
+Requires: seaborn
