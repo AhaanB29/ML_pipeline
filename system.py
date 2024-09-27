@@ -11,7 +11,7 @@ def req_lst(filename:str)-> List[str]:
 setup(
     name= 'ML_pipeline',
     version = '0.0.1',
-    author='AhaanBanerjee',
+    author='Ahaan Banerjee',
     author_email='ahaanbanerjee11@gmail.com',
     requires=req_lst('requirements.txt'),
     packages=find_packages()
