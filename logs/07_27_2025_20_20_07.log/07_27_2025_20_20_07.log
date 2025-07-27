@@ -1,0 +1,7 @@
+[2025-07-27 20:20:08,282] 21 root -INFO -Reading Raw Data.
+[2025-07-27 20:20:08,284] 26 root -INFO -Splitting the Data into 
+[2025-07-27 20:20:08,285] 29 root -INFO -Saving in CSV format
+[2025-07-27 20:20:08,288] 34 root -INFO -Ingestion of data Successfully Completed
+[2025-07-27 20:20:08,288] 58 root -INFO -Initiating Data Transform
+[2025-07-27 20:20:08,290] 62 root -INFO -Successfully Read Train And Test Data
+[2025-07-27 20:20:08,290] 71 root -INFO -Creating Pre_processing Object
