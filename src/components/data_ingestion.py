@@ -6,6 +6,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from src.components.data_transformation import DataTransformer
+
+from src.components.model_trainer import ModelTrainer
 @dataclass
 class Dataconfig:
     train_data_path :str = os.path.join('artefacts','train.csv')
@@ -42,4 +44,8 @@ if __name__ == "__main__":
     train_set,test_set = obj.initiate_ingestion()
     processor = DataTransformer()
 
-    processor.initiate_data_transform(train_data=train_set,test_data=test_set)
+    procc_train,procc_test,_ = processor.initiate_data_transform(train_data=train_set,test_data=test_set)
+
+    modeltrainer = ModelTrainer()
+    _,r2_score = modeltrainer.model_trainer_initiater(procc_train,procc_test)
+    print(r2_score)

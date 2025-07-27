@@ -1,0 +1,16 @@
+[2025-07-28 02:38:51,922] 23 root -INFO -Reading Raw Data.
+[2025-07-28 02:38:51,924] 28 root -INFO -Splitting the Data into 
+[2025-07-28 02:38:51,925] 31 root -INFO -Saving in CSV format
+[2025-07-28 02:38:51,928] 36 root -INFO -Ingestion of data Successfully Completed
+[2025-07-28 02:38:51,928] 59 root -INFO -Initiating Data Transform
+[2025-07-28 02:38:51,930] 63 root -INFO -Successfully Read Train And Test Data
+[2025-07-28 02:38:51,930] 73 root -INFO -Creating Pre_processing Object
+[2025-07-28 02:38:51,932] 76 root -INFO -Applying Transform
+[2025-07-28 02:38:51,939] 80 root -INFO -Transform Done
+[2025-07-28 02:38:51,939] 83 root -INFO -Saving Pickle File ....
+[2025-07-28 02:38:51,939] 86 root -INFO -Pickle File Saved
+[2025-07-28 02:38:51,939] 23 root -INFO -Initiating Model Training
+[2025-07-28 02:38:51,939] 25 root -INFO -Splitting the Data to get Target and Input.
+[2025-07-28 02:38:51,939] 28 root -INFO -Creating Model Objects
+[2025-07-28 02:38:51,939] 38 root -INFO -Models Initiated
+[2025-07-28 02:38:53,861] 52 root -INFO -Best Model is LinearRegression() With R2 score 1.0

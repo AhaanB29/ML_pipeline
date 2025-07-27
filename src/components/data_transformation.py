@@ -63,8 +63,8 @@ class DataTransformer:
             logging.info("Successfully Read Train And Test Data")
             target_col = 'math_score'
 
-            train_target = train_set[target_col]
-            test_target = test_set[target_col]
+            train_target = np.array(train_set[target_col])
+            test_target = np.array(test_set[target_col])
 
             train_set.drop(columns=[target_col],inplace=True)
             test_set.drop(columns=[target_col],inplace=True)

@@ -1,0 +1,15 @@
+[2025-07-28 02:35:15,020] 23 root -INFO -Reading Raw Data.
+[2025-07-28 02:35:15,022] 28 root -INFO -Splitting the Data into 
+[2025-07-28 02:35:15,023] 31 root -INFO -Saving in CSV format
+[2025-07-28 02:35:15,026] 36 root -INFO -Ingestion of data Successfully Completed
+[2025-07-28 02:35:15,026] 59 root -INFO -Initiating Data Transform
+[2025-07-28 02:35:15,028] 63 root -INFO -Successfully Read Train And Test Data
+[2025-07-28 02:35:15,028] 73 root -INFO -Creating Pre_processing Object
+[2025-07-28 02:35:15,030] 76 root -INFO -Applying Transform
+[2025-07-28 02:35:15,037] 80 root -INFO -Transform Done
+[2025-07-28 02:35:15,037] 83 root -INFO -Saving Pickle File ....
+[2025-07-28 02:35:15,037] 86 root -INFO -Pickle File Saved
+[2025-07-28 02:35:15,037] 23 root -INFO -Initiating Model Training
+[2025-07-28 02:35:15,037] 25 root -INFO -Splitting the Data to get Target and Input.
+[2025-07-28 02:35:15,037] 28 root -INFO -Creating Model Objects
+[2025-07-28 02:35:15,038] 38 root -INFO -Models Initiated
