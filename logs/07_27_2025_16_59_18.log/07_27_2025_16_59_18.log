@@ -1,0 +1,4 @@
+[2025-07-27 16:59:18,998] 21 root -INFO -Reading Raw Data.
+[2025-07-27 16:59:19,016] 26 root -INFO -Splitting the Data into 
+[2025-07-27 16:59:19,017] 29 root -INFO -Saving in CSV format
+[2025-07-27 16:59:19,021] 34 root -INFO -Ingestion of data Successfully Completed
