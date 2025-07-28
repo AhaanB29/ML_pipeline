@@ -1,0 +1,40 @@
+[2025-07-28 15:56:31,571] 96 werkzeug -INFO -[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+[2025-07-28 15:56:31,571] 96 werkzeug -INFO -[33mPress CTRL+C to quit[0m
+[2025-07-28 15:56:44,872] 96 werkzeug -INFO -192.168.1.7 - - [28/Jul/2025 15:56:44] "GET / HTTP/1.1" 200 -
+[2025-07-28 15:56:44,986] 96 werkzeug -INFO -192.168.1.7 - - [28/Jul/2025 15:56:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-28 15:57:01,549] 96 werkzeug -INFO -192.168.1.7 - - [28/Jul/2025 15:57:01] "GET /predictdata HTTP/1.1" 200 -
+[2025-07-28 15:57:19,680] 20 root -INFO -Creating Data Frame...
+[2025-07-28 15:57:19,681] 838 app -ERROR -Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/ahaanbanerjee/ML_pipeline/src/pipeline/predict_pipeline.py", line 23, in process_data
+    return pd.DataFrame(data_dict)
+  File "/home/ahaanbanerjee/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 709, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/home/ahaanbanerjee/.local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 481, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "/home/ahaanbanerjee/.local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 115, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/home/ahaanbanerjee/.local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 645, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "app.py", line 24, in predict_datapoint
+    data = pipe_obj.process_data(
+  File "/home/ahaanbanerjee/ML_pipeline/src/pipeline/predict_pipeline.py", line 25, in process_data
+    raise CustomException (e,sys)
+src.exception.CustomException: There was an error in the python script [/home/ahaanbanerjee/ML_pipeline/src/pipeline/predict_pipeline.py] line number [23] error message: [If using all scalar values, you must pass an index]
+[2025-07-28 15:57:19,683] 96 werkzeug -INFO -192.168.1.7 - - [28/Jul/2025 15:57:19] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

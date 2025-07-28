@@ -1,0 +1,38 @@
+[2025-07-28 15:50:17,262] 96 werkzeug -INFO -[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+[2025-07-28 15:50:17,262] 96 werkzeug -INFO -[33mPress CTRL+C to quit[0m
+[2025-07-28 15:50:49,114] 96 werkzeug -INFO -127.0.0.1 - - [28/Jul/2025 15:50:49] "GET / HTTP/1.1" 200 -
+[2025-07-28 15:50:49,173] 96 werkzeug -INFO -127.0.0.1 - - [28/Jul/2025 15:50:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-28 15:51:12,030] 96 werkzeug -INFO -127.0.0.1 - - [28/Jul/2025 15:51:12] "GET /predictdata HTTP/1.1" 200 -
+[2025-07-28 15:51:34,616] 20 root -INFO -Creating Data Frame...
+[2025-07-28 15:51:34,617] 838 app -ERROR -Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/home/ahaanbanerjee/ML_pipeline/src/pipeline/predict_pipeline.py", line 21, in process_data
+    df = pd.DataFrame(data = [self.gender,self.race_eth,self.parent_loe,self.lunch,self.test_prepare,
+  File "/home/ahaanbanerjee/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 798, in __init__
+    mgr = ndarray_to_mgr(
+  File "/home/ahaanbanerjee/.local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 337, in ndarray_to_mgr
+    _check_values_indices_shape_match(values, index, columns)
+  File "/home/ahaanbanerjee/.local/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 408, in _check_values_indices_shape_match
+    raise ValueError(f"Shape of passed values is {passed}, indices imply {implied}")
+ValueError: Shape of passed values is (7, 1), indices imply (7, 7)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ahaanbanerjee/anaconda3/envs/mlops/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "app.py", line 24, in predict_datapoint
+    data = pipe_obj.process_data(
+  File "/home/ahaanbanerjee/ML_pipeline/src/pipeline/predict_pipeline.py", line 26, in process_data
+    raise CustomException (e,sys)
+src.exception.CustomException: There was an error in the python script [/home/ahaanbanerjee/ML_pipeline/src/pipeline/predict_pipeline.py] line number [21] error message: [Shape of passed values is (7, 1), indices imply (7, 7)]
+[2025-07-28 15:51:34,620] 96 werkzeug -INFO -127.0.0.1 - - [28/Jul/2025 15:51:34] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

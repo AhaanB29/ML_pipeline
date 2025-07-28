@@ -23,7 +23,7 @@ class DataIngestion:
             logging.info("Reading Raw Data.")
             data = pd.read_csv("notebook/stud.csv")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
-            data['Total_Score'] = data['math_score']+ data['writing_score'] + data['reading_score']
+            #data['Total_Score'] = data['math_score']+ data['writing_score'] + data['reading_score']
 
             logging.info("Splitting the Data into ")
             train_data,test_data = train_test_split(data,test_size=0.3,random_state=42)

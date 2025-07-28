@@ -22,3 +22,11 @@ def evaluate_models(y_pred_train,y_train,y_pred_test,y_test):
         return r2_test,r2_train
     except Exception as e:
         raise CustomException(e,sys)
+    
+def load_obj(file_path):
+    try:
+        with open(file_path,'rb') as wght_file:
+            return pickle.load(wght_file)
+
+    except Exception as e:
+        raise CustomException(e,sys)

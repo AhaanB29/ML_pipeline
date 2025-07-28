@@ -1,0 +1,16 @@
+[2025-07-28 14:59:25,767] 23 root -INFO -Reading Raw Data.
+[2025-07-28 14:59:25,770] 28 root -INFO -Splitting the Data into 
+[2025-07-28 14:59:25,774] 31 root -INFO -Saving in CSV format
+[2025-07-28 14:59:25,778] 36 root -INFO -Ingestion of data Successfully Completed
+[2025-07-28 14:59:25,778] 59 root -INFO -Initiating Data Transform
+[2025-07-28 14:59:25,780] 63 root -INFO -Successfully Read Train And Test Data
+[2025-07-28 14:59:25,781] 73 root -INFO -Creating Pre_processing Object
+[2025-07-28 14:59:25,782] 76 root -INFO -Applying Transform
+[2025-07-28 14:59:25,790] 80 root -INFO -Transform Done
+[2025-07-28 14:59:25,790] 83 root -INFO -Saving Pickle File ....
+[2025-07-28 14:59:25,791] 86 root -INFO -Pickle File Saved
+[2025-07-28 14:59:25,791] 23 root -INFO -Initiating Model Training
+[2025-07-28 14:59:25,791] 25 root -INFO -Splitting the Data to get Target and Input.
+[2025-07-28 14:59:25,791] 28 root -INFO -Creating Model Objects
+[2025-07-28 14:59:25,791] 38 root -INFO -Models Initiated
+[2025-07-28 14:59:27,575] 52 root -INFO -Best Model is Ridge() With R2 score 0.8759428012931131

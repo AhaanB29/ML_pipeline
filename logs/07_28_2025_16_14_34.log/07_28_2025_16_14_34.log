@@ -1,0 +1,11 @@
+[2025-07-28 16:14:34,295] 96 werkzeug -INFO -[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+[2025-07-28 16:14:34,295] 96 werkzeug -INFO -[33mPress CTRL+C to quit[0m
+[2025-07-28 16:14:35,668] 96 werkzeug -INFO -127.0.0.1 - - [28/Jul/2025 16:14:35] "GET / HTTP/1.1" 200 -
+[2025-07-28 16:14:41,081] 96 werkzeug -INFO -127.0.0.1 - - [28/Jul/2025 16:14:41] "GET /predictdata HTTP/1.1" 200 -
+[2025-07-28 16:14:50,820] 20 root -INFO -Creating Data Frame...
+[2025-07-28 16:14:50,852] 36 root -INFO -Model File and Pre_processor Loaded Successfully
+[2025-07-28 16:14:50,855] 39 root -INFO -Reults Compiled and returned [45.09589554]
+[2025-07-28 16:14:50,856] 96 werkzeug -INFO -127.0.0.1 - - [28/Jul/2025 16:14:50] "POST /predictdata HTTP/1.1" 200 -
